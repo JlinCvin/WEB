@@ -1,11 +1,9 @@
 window.onload = function  () {
-	var clock = document.querySelector("#clock"),
-		timeSpans = clock.querySelectorAll("span");
-
+	var clock = document.getElementById("clock"),
+		timeSpans = clock.getElementsByTagName("span");
 	function format (num) {
 		return num.toString().replace(/^(\d)$/, "0$1");
 	}
-
 	function displayClock () {
 		var now = new Date(),
 			timeArr = [now.getHours(), now.getMinutes(), now.getSeconds()];
@@ -13,11 +11,10 @@ window.onload = function  () {
 			timeSpans[index].innerHTML = format(timeArr[index]);
 		});
 	}
-
 	displayClock();
-	setInterval(displayClock, 600);	
+	setInterval(displayClock, 500);	
 }
-
+/* 独立时间 */
 
 var modal = document.getElementById('myModal');
 var img = document.getElementById('myImg');
@@ -28,3 +25,4 @@ img.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
+
