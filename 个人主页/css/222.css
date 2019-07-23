@@ -1,4 +1,14 @@
-
+.stage {
+    --c-bg: hsl(262,39%,20%);
+    align-items: center;
+    background-color: white;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    overflow-y: hidden;
+    width: 100vw;
+	padding:10px;
+}
 .clock {
   background-color: #ffffff;
   width: 70vw;
